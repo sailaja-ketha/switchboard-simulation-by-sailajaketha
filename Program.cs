@@ -26,7 +26,7 @@
                 int choice = int.Parse(Console.ReadLine());
                 if (choice >= 1)
                 {
-                    Console.WriteLine("1. Switch On/Off");
+                    Console.WriteLine("1. Switch On");
                     Console.WriteLine("2. Back");
                     int option = int.Parse(Console.ReadLine());
 
