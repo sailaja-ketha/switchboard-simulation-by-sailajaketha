@@ -32,7 +32,7 @@
 
                     if (option == 1)
                     {
-                        switchboard.ChangeApplianceState(choice);
+                        switchboard.ChangeApplianceState(choice-1);
                     }
                 }
             }

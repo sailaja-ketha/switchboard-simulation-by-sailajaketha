@@ -14,7 +14,8 @@ namespace SwitchBoardSimulation
 
         public void ChangeDeviceState()
         {
-            StateOfAppliance = true;
+            StateOfAppliance = !StateOfAppliance;
+            
         }
     }
 }
