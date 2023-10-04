@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sailaja.k\\source\\repos\\Switchboard\\Switchboard\\Switchboard.csproj": {}
+    "C:\\Practice\\Technovert Tasks\\Switchboard\\Switchboard\\Switchboard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sailaja.k\\source\\repos\\Switchboard\\Switchboard\\Switchboard.csproj": {
+    "C:\\Practice\\Technovert Tasks\\Switchboard\\Switchboard\\Switchboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sailaja.k\\source\\repos\\Switchboard\\Switchboard\\Switchboard.csproj",
+        "projectUniqueName": "C:\\Practice\\Technovert Tasks\\Switchboard\\Switchboard\\Switchboard.csproj",
         "projectName": "Switchboard",
-        "projectPath": "C:\\Users\\sailaja.k\\source\\repos\\Switchboard\\Switchboard\\Switchboard.csproj",
+        "projectPath": "C:\\Practice\\Technovert Tasks\\Switchboard\\Switchboard\\Switchboard.csproj",
         "packagesPath": "C:\\Users\\sailaja.k\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sailaja.k\\source\\repos\\Switchboard\\Switchboard\\obj\\",
+        "outputPath": "C:\\Practice\\Technovert Tasks\\Switchboard\\Switchboard\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sailaja.k\\AppData\\Roaming\\NuGet\\NuGet.Config",

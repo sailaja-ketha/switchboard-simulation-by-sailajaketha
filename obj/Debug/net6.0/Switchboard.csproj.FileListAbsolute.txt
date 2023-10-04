@@ -1,0 +1,15 @@
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\bin\Debug\net6.0\Switchboard.exe
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\bin\Debug\net6.0\Switchboard.deps.json
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\bin\Debug\net6.0\Switchboard.runtimeconfig.json
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\bin\Debug\net6.0\Switchboard.dll
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\bin\Debug\net6.0\Switchboard.pdb
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\obj\Debug\net6.0\Switchboard.csproj.AssemblyReference.cache
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\obj\Debug\net6.0\Switchboard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\obj\Debug\net6.0\Switchboard.AssemblyInfoInputs.cache
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\obj\Debug\net6.0\Switchboard.AssemblyInfo.cs
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\obj\Debug\net6.0\Switchboard.csproj.CoreCompileInputs.cache
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\obj\Debug\net6.0\Switchboard.dll
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\obj\Debug\net6.0\refint\Switchboard.dll
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\obj\Debug\net6.0\Switchboard.pdb
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\obj\Debug\net6.0\Switchboard.genruntimeconfig.cache
+C:\Practice\Technovert Tasks\Switchboard\Switchboard\obj\Debug\net6.0\ref\Switchboard.dll
