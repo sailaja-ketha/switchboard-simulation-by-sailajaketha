@@ -16,7 +16,6 @@
 
             Switchboard switchboard = new Switchboard();
 
-
             for (int i = 1; i <= numOfFans; i++)
             {
                 Appliance fan = new Appliance($"Fan {i}");

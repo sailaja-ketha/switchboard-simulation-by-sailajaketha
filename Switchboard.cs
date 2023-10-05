@@ -32,8 +32,8 @@ namespace SwitchBoardSimulation
                 if (choice >= 1 && choice <= switches.Count)
                 {
                     Switch selectedSwitch = switches[choice - 1];
-                    string currentState = (selectedSwitch.ConnectedAppliance.IsOn ? "Off" : "On");
-                    Console.WriteLine($"1. {selectedSwitch.ConnectedAppliance.Name} Switch {currentState}");
+                    string changeSwitchState = (selectedSwitch.ConnectedAppliance.IsOn ? "Off" : "On");
+                    Console.WriteLine($"1. {selectedSwitch.ConnectedAppliance.Name} Switch {changeSwitchState}");
                     Console.WriteLine($"2. Back");
 
                     int option = Convert.ToInt32(Console.ReadLine());
