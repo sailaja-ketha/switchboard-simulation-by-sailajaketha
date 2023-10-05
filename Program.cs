@@ -4,7 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("**********Switch Board Simulation************");
+            Console.WriteLine("************* Switch Board Simulation ************");
             Console.Write("Enter the number of fans: ");
             int numOfFans = Convert.ToInt32(Console.ReadLine());
 

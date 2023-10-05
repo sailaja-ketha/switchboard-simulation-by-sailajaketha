@@ -13,7 +13,7 @@ namespace SwitchBoardSimulation
 
         public void ShowSwitchBoardMenu()
         {
-            Console.WriteLine("Switchboard Menu:");
+            Console.WriteLine("----------Switchboard Menu:---------");
             for (int i = 0; i < switches.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. {switches[i].ConnectedAppliance.Name} is {(switches[i].ConnectedAppliance.IsOn ? "On" : "Off")}");
@@ -25,26 +25,35 @@ namespace SwitchBoardSimulation
             while (true)
             {
                 ShowSwitchBoardMenu();
-                Console.WriteLine("Enter the device number to control or  to back:");
+
+                Console.WriteLine("Enter the device number to control or to back:");
                 int choice = Convert.ToInt32(Console.ReadLine());
-            
-                if (choice >= 1)
+
+                if (choice >= 1 && choice <= switches.Count)
                 {
-                    Console.WriteLine("1. Switch On");
-                    Console.WriteLine("2. Switch Off");
-                    Console.WriteLine("3. Back");
+                    Switch selectedSwitch = switches[choice - 1];
+                    string currentState = (selectedSwitch.ConnectedAppliance.IsOn ? "Off" : "On");
+                    Console.WriteLine($"1. {selectedSwitch.ConnectedAppliance.Name} Switch {currentState}");
+                    Console.WriteLine($"2. Back");
+
                     int option = Convert.ToInt32(Console.ReadLine());
+
                     if (option == 1)
                     {
-                        switches[choice - 1].TurnOn();
+                        if (selectedSwitch.ConnectedAppliance.IsOn)
+                        {
+                            selectedSwitch.TurnOff();
+                        }
+                        else
+                        {
+                            selectedSwitch.TurnOn();
+                        }
                     }
-                    else if (option == 2)
-                    {
-                        switches[choice - 1].TurnOff();
-                    }
-                    
                 }
-               
+                else
+                {
+                    Console.WriteLine("Invalid device number try again");
+                }
             }
         }
     }
