@@ -3,28 +3,49 @@ namespace SwitchBoardSimulation
 {
     public class Switchboard
     {
-        public List<Appliance> appliances = new List<Appliance>();
+        
+        private List<Switch> switches = new List<Switch>();
 
-        public void AddAppliance(string name, int count)
+        public void AddSwitch(Switch switchToAdd)
         {
-            for (int i = 1; i <= count; i++)
-            {
-                appliances.Add(new Appliance($"{name} {i}"));
-            }
+            switches.Add(switchToAdd);
         }
 
         public void ShowSwitchBoardMenu()
         {
             Console.WriteLine("Switchboard Menu:");
-            for (int i = 0; i < appliances.Count; i++)
+            for (int i = 0; i < switches.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. {appliances[i].NameOfAppliance} is {(appliances[i].StateOfAppliance ? "On" : "Off")}");
+                Console.WriteLine($"{i + 1}. {switches[i].ConnectedAppliance.Name} is {(switches[i].ConnectedAppliance.IsOn ? "On" : "Off")}");
             }
         }
 
-        public void ChangeApplianceState(int index)
-        { 
-            appliances[index].ChangeDeviceState();
+        public void Run()
+        {
+            while (true)
+            {
+                ShowSwitchBoardMenu();
+                Console.WriteLine("Enter the device number to control or  to back:");
+                int choice = Convert.ToInt32(Console.ReadLine());
+            
+                if (choice >= 1)
+                {
+                    Console.WriteLine("1. Switch On");
+                    Console.WriteLine("2. Switch Off");
+                    Console.WriteLine("3. Back");
+                    int option = Convert.ToInt32(Console.ReadLine());
+                    if (option == 1)
+                    {
+                        switches[choice - 1].TurnOn();
+                    }
+                    else if (option == 2)
+                    {
+                        switches[choice - 1].TurnOff();
+                    }
+                    
+                }
+               
+            }
         }
     }
 }
