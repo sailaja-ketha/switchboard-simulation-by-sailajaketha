@@ -2,50 +2,31 @@
 namespace SwitchBoardSimulation
 {
     public class Switchboard
-    {
-        
-        private List<Switch> switches = new List<Switch>();
+    { 
+        public List<Switch> switches = new List<Switch>();
+        public List<Appliance> appliances = new List<Appliance>();
 
         public void AddSwitch(Switch switchToAdd)
         {
             switches.Add(switchToAdd);
         }
 
-        public void ShowSwitchBoardMenu()
+        public void AddAppliance(Appliance applianceToAdd)
         {
-            Console.WriteLine("Switchboard Menu:");
-            for (int i = 0; i < switches.Count; i++)
-            {
-                Console.WriteLine($"{i + 1}. {switches[i].ConnectedAppliance.Name} is {(switches[i].ConnectedAppliance.IsOn ? "On" : "Off")}");
-            }
+            appliances.Add(applianceToAdd);
         }
 
-        public void Run()
+        public void DisplaySwitchBoardMenu()
         {
-            while (true)
+            for (int i = 0; i < appliances.Count; i++)
             {
-                ShowSwitchBoardMenu();
-                Console.WriteLine("Enter the device number to control or  to back:");
-                int choice = Convert.ToInt32(Console.ReadLine());
-            
-                if (choice >= 1)
-                {
-                    Console.WriteLine("1. Switch On");
-                    Console.WriteLine("2. Switch Off");
-                    Console.WriteLine("3. Back");
-                    int option = Convert.ToInt32(Console.ReadLine());
-                    if (option == 1)
-                    {
-                        switches[choice - 1].TurnOn();
-                    }
-                    else if (option == 2)
-                    {
-                        switches[choice - 1].TurnOff();
-                    }
-                    
-                }
-               
+                var appliance = appliances[i];
+                string applianceState = appliance.IsOn ? "On" : "Off";
+                Console.WriteLine($"{i + 1}. {appliance.Name} {appliance.Id} is \"{applianceState}\"");
             }
         }
+        
+
     }
+    
 }
