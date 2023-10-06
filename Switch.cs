@@ -11,7 +11,7 @@ namespace SwitchBoardSimulation
         {
             Id = id;
             ApplianceId = applianceId;
- 
+            IsOn = false;
         }
 
 
