@@ -24,19 +24,32 @@
                 switchboard.AddSwitch(fanSwitch);
             }
 
-            for (int i = numOfFans + 1; i <= numOfFans + numOfACs; i++)
+            for(int i = 1;i <= numOfACs; i++)
             {
                 Switch acSwitch = new Switch(i, i);
                 switchboard.AddSwitch(acSwitch);
+
             }
 
-            for (int i = numOfFans + numOfACs + 1; i <= numOfFans + numOfACs + numOfBulbs; i++)
+            for( int i = 1; i<=numOfBulbs; i++)
             {
                 Switch bulbSwitch = new Switch(i, i);
                 switchboard.AddSwitch(bulbSwitch);
             }
 
-          
+            //for (int i = numOfFans + 1; i <= numOfFans + numOfACs; i++)
+            //{
+            //    Switch acSwitch = new Switch(i, i);
+            //    switchboard.AddSwitch(acSwitch);
+            //}
+
+            //for (int i = numOfFans + numOfACs + 1; i <= numOfFans + numOfACs + numOfBulbs; i++)
+            //{
+            //    Switch bulbSwitch = new Switch(i, i);
+            //    switchboard.AddSwitch(bulbSwitch);
+            //}
+
+
             Console.WriteLine("************* Switchboard Menu ************");
             Console.WriteLine($"Total number of switches: {switchboard.switches.Count}");
 
