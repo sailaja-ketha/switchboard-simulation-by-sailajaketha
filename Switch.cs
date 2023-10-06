@@ -3,21 +3,17 @@ namespace SwitchBoardSimulation
 {
     public class Switch
     {
-        public Appliance ConnectedAppliance { get; set; }
+        public int Id { get; set; }
+        public int ApplianceId { get; set; }
+        public bool IsOn { get; set; }  
 
-        public Switch(Appliance appliance)
+        public Switch(int id, int applianceId)
         {
-            ConnectedAppliance = appliance;
+            Id = id;
+            ApplianceId = applianceId;
+ 
         }
 
-        public void TurnOn()
-        {
-            ConnectedAppliance.IsOn = true;
-        }
 
-        public void TurnOff()
-        {
-            ConnectedAppliance.IsOn = false;
-        }
     }
 }

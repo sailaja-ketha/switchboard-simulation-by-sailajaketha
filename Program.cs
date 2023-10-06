@@ -4,71 +4,45 @@
     {
         static void Main(string[] args)
         {
-            try
+            Console.WriteLine("************* Switch Board Simulation ************");
+            Console.Write("Enter the number of fans: ");
+            int numOfFans = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter the number of ACs: ");
+            int numOfACs = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter the number of bulbs: ");
+            int numOfBulbs = Convert.ToInt32(Console.ReadLine());
+
+            
+            Switchboard switchboard = new Switchboard();
+
+            
+            for (int i = 1; i <= numOfFans; i++)
             {
-
-                Console.WriteLine("************* Switch Board Simulation ************");
-                //Console.Write("Enter the number of fans: ");
-                //int numOfFans = Convert.ToInt32(Console.ReadLine());
-
-                //Console.Write("Enter the number of ACs: ");
-                //int numOfACs = Convert.ToInt32(Console.ReadLine());
-
-                //Console.Write("Enter the number of bulbs: ");
-                //int numOfBulbs = Convert.ToInt32(Console.ReadLine());
-
-                int numOfFans = GetValidInput("Enter the number of fans: ");
-                int numOfACs = GetValidInput("Enter the number of ACs: ");
-                int numOfBulbs = GetValidInput("Enter the number of bulbs: ");
-
-                Switchboard switchboard = new Switchboard();
-
-                for (int i = 1; i <= numOfFans; i++)
-                {
-                    Appliance fan = new Appliance($"Fan {i}");
-                    Switch fanSwitch = new Switch(fan);
-                    switchboard.AddSwitch(fanSwitch);
-                }
-
-                for (int i = 1; i <= numOfACs; i++)
-                {
-                    Appliance ac = new Appliance($"AC {i}");
-                    Switch acSwitch = new Switch(ac);
-                    switchboard.AddSwitch(acSwitch);
-                }
-                for (int i = 1; i <= numOfBulbs; i++)
-                {
-                    Appliance bulb = new Appliance($"Bulb {i}");
-                    Switch bulbSwitch = new Switch(bulb);
-                    switchboard.AddSwitch(bulbSwitch);
-                }
-
-                switchboard.Run();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Please enter valid number");
+                Switch fanSwitch = new Switch(i, i); 
+                switchboard.AddSwitch(fanSwitch);
             }
 
-
-
-            static int GetValidInput(string message)
+            for (int i = numOfFans + 1; i <= numOfFans + numOfACs; i++)
             {
-                int input;
-                while (true)
-                {
-                    Console.Write(message);
-                    if (int.TryParse(Console.ReadLine(), out input))
-                    {
-                        return input;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid input. Please enter a valid number.");
-                    }
-                }
+                Switch acSwitch = new Switch(i, i);
+                switchboard.AddSwitch(acSwitch);
             }
 
+            for (int i = numOfFans + numOfACs + 1; i <= numOfFans + numOfACs + numOfBulbs; i++)
+            {
+                Switch bulbSwitch = new Switch(i, i);
+                switchboard.AddSwitch(bulbSwitch);
+            }
+
+          
+            Console.WriteLine("************* Switchboard Menu ************");
+            Console.WriteLine($"Total number of switches: {switchboard.switches.Count}");
+
+           
+
+           
         }
     }
 }
