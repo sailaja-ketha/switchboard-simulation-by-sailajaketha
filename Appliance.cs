@@ -13,5 +13,11 @@ namespace SwitchBoardSimulation
             Name = name;
             IsOn = false;   
         }
+
+
+        public void Toggle()
+        {
+            IsOn = !IsOn;
+        }
     }
 }

@@ -40,16 +40,46 @@
                 switchboard.AddSwitch(bulbSwitch);
             }
 
-            Console.WriteLine("************* Switchboard Menu ************");
-            Console.WriteLine($"Total number of switches: {switchboard.switches.Count}");
 
-
-            for (int i = 0; i < switchboard.appliances.Count; i++)
+            while (true)
             {
-                var appliance = switchboard.appliances[i];
-                string applianceState = appliance.IsOn ? "On" : "Off";
-                Console.WriteLine($"{i + 1}. {appliance.Name} {appliance.Id} is \"{applianceState}\"");
+                switchboard.DisplaySwitchBoardMenu();
+                Console.WriteLine("Enter the device number to control (0 to exit):");
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                if (choice == 0)
+                {
+                    break;
+                }
+                else if (choice >= 1 && choice <= switchboard.appliances.Count)
+                {
+                    var selectedSwitch = switchboard.switches.Find(s => s.ApplianceId == switchboard.appliances[choice - 1].Id);
+                    if (selectedSwitch != null)
+                    {
+                        string toggleState = selectedSwitch.IsOn ? "Off" : "On";
+
+                        Console.WriteLine($"1. {switchboard.appliances[choice - 1].Name} {switchboard.appliances[choice - 1].Id} to switch {toggleState}.");
+                        Console.WriteLine("2. Back");
+
+                        int controlChoice = Convert.ToInt32(Console.ReadLine());
+
+                        if (controlChoice == 1)
+                        {
+                            selectedSwitch.Toggle(switchboard);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid device selection.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid device number. Please enter a valid device number.");
+                }
+
             }
+
         }
     }
 }
