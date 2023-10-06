@@ -68,14 +68,11 @@
                             selectedSwitch.Toggle(switchboard);
                         }
                     }
-                    else
-                    {
-                        Console.WriteLine("Invalid device selection.");
-                    }
+              
                 }
                 else
                 {
-                    Console.WriteLine("Invalid device number. Please enter a valid device number.");
+                    Console.WriteLine("Invalid device number Please enter a valid device number.");
                 }
 
             }
