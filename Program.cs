@@ -31,8 +31,6 @@ namespace SwitchBoardSimulation
                 Appliance acAppliance = new Appliance("AC", i);
                 Switch acSwitch = new Switch(i + numOfFans, acAppliance.Id);
                 switchboard.AddSwitch(acSwitch);
-               
-               
             }
 
             for (int i = 1; i <= numOfBulbs; i++)
