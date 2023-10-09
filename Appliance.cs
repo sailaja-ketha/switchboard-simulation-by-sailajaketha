@@ -9,7 +9,8 @@ namespace SwitchBoardSimulation
         public Appliance(string name, int id)
         {
             Id = id;
-            Name = name; 
+            Name = name;
+ 
         }
     }
 }
